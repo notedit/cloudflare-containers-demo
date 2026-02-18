@@ -20,8 +20,6 @@ RUN apt install -y \
 COPY package.json package*.json yarn.lock* pnpm-lock.yaml* bun.lockb* bun.lock* tsconfig.json* remotion.config.* ./
 COPY src ./src
 
-COPY public ./public
-
 RUN npm i
 
 RUN npx remotion browser ensure
